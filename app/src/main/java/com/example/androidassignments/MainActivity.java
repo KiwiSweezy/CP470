@@ -1,31 +1,21 @@
 package com.example.androidassignments;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
 
-public class LoginActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+import com.example.androidassignments.R.layout;
 
-    private Button loginButton = findViewById(R.id.loginButton);
 
-    @Override
+public final class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
-        SharedPreferences sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE);
-
-        String savedLogin = sharedPreferences.getString("DefaultEmail", "email@domain.com");
-
-
+        this.setContentView(layout.activity_main);
     }
 
     protected void onResume() {
         super.onResume();
-
+        Log.i("MainActivity","onResume");
     }
 
     protected void onStart() {
@@ -43,4 +33,13 @@ public class LoginActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
     }
+    /*protected void onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState);
+
+    }
+
+    protected void onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+    }*/
 }

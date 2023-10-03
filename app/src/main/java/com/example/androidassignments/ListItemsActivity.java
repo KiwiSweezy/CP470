@@ -11,4 +11,27 @@ public class ListItemsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_items);
     }
+
+    protected void onResume() {
+        super.onResume();
+    }
+
+    protected void onStart() {
+        super.onStart();
+    }
+
+    protected void onPause() {
+        super.onPause();
+    }
+
+    protected void onStop() {
+        super.onStop();
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+
+
 }
